@@ -78,8 +78,8 @@ jobs:
       - run: pnpm install
       - run: pnpm build
       
-  build-t3-app:
-    name: Build an outputted t3-app
+  build-cardano-dapp:
+    name: Build an outputted cardano dapp
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
