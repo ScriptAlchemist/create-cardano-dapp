@@ -56,19 +56,17 @@ export const runCli = async () => {
     )
     .option(
       "-y, --default",
-      "Bypass the CLI and use all default options to bootstrap a new t3-app",
+      "Bypass the CLI and use all default options to bootstrap a new cardano dapp",
       false,
     )
     .version(getVersion(), "-v, --version", "Display the version number")
     .addHelpText(
       "afterAll",
-      `\n The t3 stack was inspired by ${chalk
+      `\n The Cardano stack was inspired by ${chalk
         .hex("#E8DCFF")
         .bold(
-          "@t3dotgg",
-        )} and has been used to build awesome fullstack applications like ${chalk
-        .hex("#E24A8D")
-        .underline("https://ping.gg")} \n`,
+          "@Cardano_G_O_A_T",
+        )} and has been used to build awesome fullstack applications like\n`,
     )
     .parse(process.argv);
 
@@ -180,7 +178,7 @@ export const runCli = async () => {
       }
     }
   } catch (err) {
-    // If the user is not calling create-t3-app from an interactive terminal, inquirer will throw an error with isTTYError = true
+    // If the user is not calling create-cardano-dapp from an interactive terminal, inquirer will throw an error with isTTYError = true
     // If this happens, we catch the error, tell the user what has happened, and then continue to run the program with a default t3 app
     // eslint-disable-next-line -- Otherwise we have to do some fancy namespace extension logic on the Error type which feels overkill for one line
     if (err instanceof Error && (err as any).isTTYError) {
