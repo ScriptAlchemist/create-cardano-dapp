@@ -1,6 +1,6 @@
 {
   "name": "create-cardano-dapp",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Create Cardano web application that works with the Cardano distributed network.",
   "author": "Cardano Goat <cardanogoat@gmail.com>",
   "license": "MIT",
