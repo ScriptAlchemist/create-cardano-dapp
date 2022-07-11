@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/CardanoGoat-io/create-cardano-dapp/compare/v0.1.1...v0.1.2) (2022-07-11)
+
+### Features
+
+- updating stack data and adding readme ([7463d0f](https://github.com/CardanoGoat-io/create-cardano-dapp/commit/7463d0fde68ab750fe737e6e4f1ade6186e2f669))
+
+### Bug Fixes
+
+- github yaml and contributing page ([6f4b4a8](https://github.com/CardanoGoat-io/create-cardano-dapp/commit/6f4b4a8e6956b575107764140fde96b1bbb6a14f))
+
 ### 0.1.1 (2022-07-11)
 
 ### Features
