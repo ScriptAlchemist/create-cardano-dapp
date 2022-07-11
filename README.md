@@ -1,10 +1,8 @@
-<h1 align="center"> create-cardano-dapp </h1>
 <div align="center">
 
+<img src="https://user-images.githubusercontent.com/28788001/178303168-2021d3cb-8149-41dd-ad14-b76f282810f4.png" width="400"/>
+
 Interactive CLI to quickly set up an opinionated, full stack, Cardano NextJS project.
-
-<!-- <img src="https://s6.imgcdn.dev/BJW4B.png" width="130" style="border-radius:40%"/> -->
-
 </div>  
 <div align="center">
 <br/>
