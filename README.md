@@ -3,6 +3,7 @@
 <img src="https://user-images.githubusercontent.com/28788001/178303168-2021d3cb-8149-41dd-ad14-b76f282810f4.png" width="400"/>
 
 Interactive CLI to quickly set up an opinionated, full stack, Cardano NextJS project.
+
 </div>  
 <div align="center">
 <br/>
@@ -75,13 +76,12 @@ The _"Cardano Stack"_ is a web development stack made by [Cardano Goat](https://
 It consists of
 
 - [Next.js](https://nextjs.org)
+- [lucid-cardano](https://github.com/Berry-Pool/lucid)
 - [tRPC](https://trpc.io)
 - [Tailwind CSS](https://tailwindcss.com)
 - [TypeScript](https://typescriptlang.org)
 - [Prisma](https://prisma.io)
 - [NextAuth.js](https://next-auth.js.org)
-
-If you're looking for more info about this stack (state management solutions, deployment recommendations, etc) - check out [init.tips](https://init.tips/others)
 
 </div>
 
@@ -93,7 +93,7 @@ I'll be frank - this is an _opinionated project_. We share a handful of core bel
 
 ## 1. Solve Problems
 
-It's easy to fall in the trap of "adding everything" - we explicitly _don't_ want to do that. Everything added to `create-t3-app` should solve a _specific_ problem that exists within the core technologies included.
+It's easy to fall in the trap of "adding everything" - we explicitly _don't_ want to do that. Everything added to `create-cardano-dapp` should solve a _specific_ problem that exists within the core technologies included.
 
 This means we **won't** add things like state libraries (zustand, redux), but we **will** add things like NextAuth.js and integrate it with Prisma and tRPC for you
 
@@ -145,6 +145,61 @@ Made with [contrib.rocks](https://contrib.rocks).
     <img height="34px" src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" alt="Powered by vercel">
   </a>
 </p>
+
+### Other Recommendations
+
+We recognize that Next.js and TypeScript don't solve every problem. While we encourage you to use the primitives they provide as often as you can, there are other tools that will help simplify and improve your developer experience.
+
+### UI Essentials
+
+Tailwind CSS - for your styles
+I hated the idea of Tailwind. Then I tried it.
+
+It seems like Bootstrap. I promise it is not Bootstrap. It enables a "flow state" in UI dev I didn't know was achievable. (and yes we used it here)
+
+### Data Management
+
+React Query - for your client
+This little library handles all your async React needs from data fetching to IO management. Hard to imagine doing React dev without it now. Might be able to replace your state management library too.
+
+Prisma.io - for your DB
+Prisma is to SQL what TypeScript is to JS. Never thought I'd love an ORM, but man, trust me on this one.
+
+tRPC - for defining and consuming APIs
+tRPC delivers on GraphQL's promise of seamless client development against a typesafe server without all of the boilerplate. It's a clever abuse of TypeScript that provides an incredible dev experience.
+
+### Analytics
+
+Plausible - for user data
+Need analytics? Plausible is one of the quickest ways to get them. Super minimal. It even has a simple plugin for Next.js.
+
+### Authentication
+
+NextAuth.js - for authentication
+Man this library makes auth easy. No ownership compromise, hooks up to your DB directly. So good that I ported two projects to Next to use it.
+
+Note: Does not support React Native directly. Yet. 😉
+
+### Deployments, Infrastructure, Databases and CI
+
+Vercel - for hosting your website
+Vercel took the hell of web deployments and made it a set-and-forget GitHub integration. We've scaled to hundreds of thousands of users without issue. AWS-powered, just a way better interface :)
+
+PlanetScale - for databases without the worry
+PlanetScale is the best "serverless database platform" I've used by far. Insane scale, great developer experience, fantastic pricing. If you're using sql (and hopefully Prisma), this is hard to beat.
+
+Railway - for hosting your infra
+"Modern Heroku". Easiest way to get a real server up and running. If Vercel and PlanetScale aren't enough, Railway probably is. Point it at a GitHub repo and go.
+
+### State Management
+
+Editor's Note: State management libraries can be great, but often aren't necessary. Start with React Query and built-in React state, reach for these when you need more
+
+Zustand - for never using Redux again
+The "modern, simple Redux" you didn't know you needed. Poimandres can always be trusted. I have built everything from video call apps to games to servers with this little library
+
+Jotai - for never using Context again
+For a more atomic approach, Jotai is hard to beat. Also by Poimandres , Jotai lets you define singletons that feel like global useState. Great option for stateful behaviors that don't need a state machine just yet
 
 [downloads-image]: https://img.shields.io/npm/dm/create-cardano-dapp?color=364fc7&logoColor=364fc7
 [npm-url]: https://www.npmjs.com/package/create-cardano-dapp
