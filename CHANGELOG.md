@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/CardanoGoat-io/create-cardano-dapp/compare/v0.1.4...v0.1.5) (2022-07-12)
+
+### Features
+
+- adding lucid and env examples ([e6af423](https://github.com/CardanoGoat-io/create-cardano-dapp/commit/e6af4233d5d532eea934259a2ae2122e571db23b))
+
+### Bug Fixes
+
+- adding cardano dapp terminology and removing javascript option ([ab81e94](https://github.com/CardanoGoat-io/create-cardano-dapp/commit/ab81e949e56d47c1829e63a13b4e3c6bde966210))
+
 ### [0.1.4](https://github.com/CardanoGoat-io/create-cardano-dapp/compare/v0.1.3...v0.1.4) (2022-07-12)
 
 ### Bug Fixes
