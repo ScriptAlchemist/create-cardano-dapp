@@ -112,7 +112,7 @@ export const runCli = async () => {
       const { language } = await inquirer.prompt<{ language: string }>({
         name: "language",
         type: "list",
-        message: "Will you be using JavaScript or TypeScript?",
+        message: "Your only choice is TypeScript?",
         choices: [
           { name: "TypeScript", value: "typescript", short: "TypeScript" },
           // { name: "JavaScript", value: "javascript", short: "TypeScript" }, // Both options should have 'TypeScript' as the short value to improve UX and reduce confusion
