@@ -2,7 +2,7 @@ import type { AvailablePackages } from "../installers/index.js";
 import chalk from "chalk";
 import { Command } from "commander";
 import inquirer from "inquirer";
-import { CREATE_T3_APP, DEFAULT_APP_NAME } from "../consts.js";
+import { CREATE_CARDANO_DAPP, DEFAULT_APP_NAME } from "../consts.js";
 import { availablePackages } from "../installers/index.js";
 import { getVersion } from "../utils/getT3Version.js";
 import { getUserPkgManager } from "../utils/getUserPkgManager.js";
@@ -34,7 +34,7 @@ const defaultOptions: CliResults = {
 export const runCli = async () => {
   const cliResults = defaultOptions;
 
-  const program = new Command().name(CREATE_T3_APP);
+  const program = new Command().name(CREATE_CARDANO_DAPP);
 
   // TODO: This doesn't return anything typesafe. Research other options?
   // Emulate from: https://github.com/Schniz/soundtype-commander
@@ -115,7 +115,7 @@ export const runCli = async () => {
         message: "Will you be using JavaScript or TypeScript?",
         choices: [
           { name: "TypeScript", value: "typescript", short: "TypeScript" },
-          { name: "JavaScript", value: "javascript", short: "TypeScript" }, // Both options should have 'TypeScript' as the short value to improve UX and reduce confusion
+          // { name: "JavaScript", value: "javascript", short: "TypeScript" }, // Both options should have 'TypeScript' as the short value to improve UX and reduce confusion
         ],
         default: "typescript",
       });
@@ -183,9 +183,11 @@ export const runCli = async () => {
     // eslint-disable-next-line -- Otherwise we have to do some fancy namespace extension logic on the Error type which feels overkill for one line
     if (err instanceof Error && (err as any).isTTYError) {
       logger.warn(
-        `${CREATE_T3_APP} needs an interactive terminal to provide options`,
+        `${CREATE_CARDANO_DAPP} needs an interactive terminal to provide options`,
       );
-      logger.info(`Bootstrapping a default t3 app in ./${cliResults.appName}`);
+      logger.info(
+        `Bootstrapping a default cardano dapp in ./${cliResults.appName}`,
+      );
     } else {
       throw err;
     }

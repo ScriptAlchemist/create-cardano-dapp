@@ -9,6 +9,6 @@ export const PKG_ROOT = path.join(distPath, "../");
 
 //export const PKG_ROOT = path.dirname(require.main.filename);
 
-export const TITLE_TEXT = `CREATE Cardano DAPP`;
+export const TITLE_TEXT = `CREATE ₳ DAPP`;
 export const DEFAULT_APP_NAME = "my-cardano-dapp";
-export const CREATE_T3_APP = "create-cardano-dapp";
+export const CREATE_CARDANO_DAPP = "create-cardano-dapp";
